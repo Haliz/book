@@ -5,7 +5,9 @@ import java.util.Comparator;
 
 public class ArraysSortWithObject {
     public static String[] sort(String[] data) {
-        return Arrays.stream(data).sorted(Comparator.reverseOrder()).toArray(String[]::new);
+//        return Arrays.stream(data).sorted(Comparator.reverseOrder()).toArray(String[]::new);
+        Arrays.sort(data,Comparator.reverseOrder());
+        return data;
     }
 }
 
