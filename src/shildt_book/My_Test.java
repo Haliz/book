@@ -8,7 +8,13 @@ import java.io.IOException;
 
 public class My_Test {
     public static void main(String[] args) throws IOException {
-        Console console = System.console();
-        System.out.println(console);
+        var a= System.nanoTime();
+        System.out.println(a);
+        for (int i = 100000; i > 1; i--) {
+            System.out.println(i);
+        }
+        var b= System.nanoTime();
+        System.out.println(b);
+        System.out.println("Быстродействие: " + ((b-a)/1000000) + " мс");
     }
 }
