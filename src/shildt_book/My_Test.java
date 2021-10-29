@@ -1,20 +1,28 @@
 package shildt_book;
 
-import java.io.Console;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+
+import java.util.List;
 
 
 public class My_Test {
-    public static void main(String[] args) throws IOException {
-        var a= System.nanoTime();
-        System.out.println(a);
-        for (int i = 100000; i > 1; i--) {
-            System.out.println(i);
+    public static void main(String[] args) {
+        System.out.println(getResult(List.of("d", "d", "d", "u", "d", "d", "u")));
+    }
+
+    public static int getResult(List<String> arraySteps) {
+        int rsl = 0;
+        int deep = 0;
+        for (String step : arraySteps) {
+            if (step.equals("d")) {
+                deep++;
+                }
+            else if (step.equals("u")) {
+                deep--;
+            }
+            if (deep > rsl) {
+                rsl = deep;
+            }
         }
-        var b= System.nanoTime();
-        System.out.println(b);
-        System.out.println("Быстродействие: " + ((b-a)/1000000) + " мс");
+        return rsl;
     }
 }
