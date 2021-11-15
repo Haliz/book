@@ -1,10 +1,10 @@
-package shildt_book;
-
+package geecko;
 
 import java.util.List;
 
+/*Задача про ступеньки. Надо посчитать максимальную глубину подвала. Есть ступеньки вверх и вниз*/
 
-public class My_Test {
+public class Level1 {
     public static void main(String[] args) {
         System.out.println(getResult(List.of("d", "d", "d", "u", "d", "d", "u")));
     }
@@ -15,7 +15,7 @@ public class My_Test {
         for (String step : arraySteps) {
             if (step.equals("d")) {
                 deep++;
-                }
+            }
             else if (step.equals("u")) {
                 deep--;
             }
